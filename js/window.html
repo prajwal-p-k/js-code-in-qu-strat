@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>window Object</h1>
+    <input type="button" value="open new window" onclick="windowopen()">
+    <br><br>
+    <input type="button" value="close window" onclick="windowclose()">
+    <br><br>
+    <input type="button" value="focus" onclick="windowfocus()">
+    <br><br>
+    <input type="button" value="Blur" onclick="windowblur()">
+    <br><br>
+    <input type="button" value="moveBy" onclick="windowmoveBy()"> 
+    <!-- moveby used to incress the window size(Left,Right,Top,Bottom) -->
+    <br><br>
+    <input type="button" value="moveTo" onclick="windowmoveTo()">
+    <!-- moveto used to set the window position -->
+    <br><br>
+    <input type="button" value="windowresize" onclick="windowresize()">
+    <br><br>
+    <input type="button" value="resizeto" onclick="windowresize()">
+
+    <script>
+        let w;
+        function windowopen(){
+            w=window.open("https://www.google.com","","width=10","height=10");
+        }
+        function windowclose(){
+            w.close();
+        }
+        function windowfocus(){
+            w.focus();
+        }
+        function windowblur(){
+            w.blur();
+        }
+        function windowmoveBy(){
+            w.moveBy(250,250);
+        }
+        function windowmoveTo(){
+            w.moveTo(10,50);
+        }
+        function windowresize(){
+            w.resizeBy(500,500);
+        }
+        function windowresize(){
+            w.resizeTo(500,500);
+        }
+    </script>
+    
+</body>
+</html>

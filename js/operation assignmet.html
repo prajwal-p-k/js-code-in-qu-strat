@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        form{
+            border: 2px solid black;
+            width: fit-content;
+            margin: auto;
+            text-align: center;
+        }
+        label, input, span{
+            display: block;
+            margin: 10px;
+        }
+        #result{
+            font-size: 2em;
+            font-weight: bold;
+            
+        }
+    </style>
+    <form >
+        <label for="">first operant<input type="number" id="name"></label>
+        <br>
+        <label for="">second operant<input type="number" id="name1"></label>
+        <br>
+        <label for="">operator </label>
+        <select name="" id="name2">
+            <option value="">select the operator</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <br><br>
+        <br>
+        <input style="display:block;margin:0 auto;" type="button" value="Calculate" onclick="performCalculation()"/><br><br>
+ 
+        <span id="result"></span>
+    </form>
+    <div>
+        
+        <p id="result"></p>
+        <script>
+            function performCalculation(){
+                let a=document.getElementById("name").value;
+                let b=document.getElementById("name1").value;
+                let c=document.getElementById("name2").value;
+                let result
+                switch(c){
+                    case "+":
+                        result=parseInt(a)+parseInt(b);
+                        break;
+                    case "-":
+                        result=parseInt(a)-parseInt(b);
+                        break;
+                    case "*":
+                        result=parseInt(a)*parseInt(b);
+                        break;
+                    case "/":
+                        result=parseInt(a)/parseInt(b);
+                        break;
+                    default:
+                        result="Invalid operation";
+                }
+                document.getElementById("result").textContent="Result: "+result;
+            }
+            // document.getElementById('result').textContent = "Result: "+result;
+        </script>
+    </div>
+   
+
+    
+</body>
+</html>

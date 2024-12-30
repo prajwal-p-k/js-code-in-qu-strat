@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>HTML DOM: it is a standard for how to get,change,add or delete HTML elements.all html elements are treated as objects.there are some properties for all those mothods and also for the accessing the elements</p>
+    <form name="studentForm">
+        RegNo:<input type="text" name="RegNo"><br>
+        Name:<input type="text" name="Name" value="Prajwal"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <form name="traineeForm"></form>
+        Employee RegNo:<input type="text" name="Employee RegNo"><br>
+        Name:<input type="text" name="Employee Name" value="Prajwal"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <a href="https://www.google.com">Google</a>
+    <a href="https://www.youtube.com">Youtube</a>
+    <a href="https://www.facebook.com">Facebook</a>
+    <a href="#">HTML</a>
+    <a href="#">CSS</a>
+    <a href="#">Javascript</a>
+    <a name="css">HTML
+        <h1>CSS</h1>
+        <p>it is a css language</p>
+    </a>
+    <a name="js">HTML
+        <h1>HTML</h1>
+        <p>it is a scripting language</p>
+    </a>
+    <img src="/1.jpg" alt="nature" height="100" width="100">
+    <br>
+    <img src="/2.jpg" alt="nature" height="100" width="100">
+    <br>
+
+    <script>
+        document.write(document.forms.length+"<br>");
+        document.write(document.forms[0].name+"<br>");
+        document.write(document.studentForm.Name.value+"<br>");
+        // document.bgColor="red";
+        // document.fgColor="green";
+        document.alinkColor="orange";
+        document.linkColor="blue";
+        document.vlinkColor="green";
+        document.write(document.anchors.length+"<br>");
+        document.write(document.anchors[0].name+"<br>");
+        document.write(document.links[0].href+"<br>");
+        // document.links[0].href="https://www.google.com";
+        // doucment.write("domain name:"+document.domain+"<br>");
+        document.title="prajwal";
+        document.write(document.title+"<br>");
+        document.write(document.URL+"<br>");
+        document.images[0].src="prajwal.jpg";
+        document.images[1].alt="prajwal p K.jpg";
+
+    </script>
+    
+</body>
+</html>

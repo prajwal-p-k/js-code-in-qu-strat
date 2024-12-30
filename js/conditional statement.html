@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- conditional statement : to implement decision making 
+     ex: if,else if,else -->
+     <!--ternary operator: ?
+     synatx: condition ? expression1 : expression2  -->
+     <!-- nested if statement -->
+     <p>if statement</p>
+     <script>
+        //if-else
+
+        // let num=window.prompt("enter number");
+
+        // if(num%2==0){
+        //     document.write("number is even");
+        // }
+        // else{
+        //     document.write("number is odd");
+        // }
+
+        // if-else
+
+        // let age= window.prompt("enter your age");
+        // if(age<=18){
+        //     document.write("junior");
+        // }
+        // else if(age>60){
+        //     document.write("senior");
+        // }
+        // else{
+        //     document.write("adult");
+        // }
+
+        // ternary operator
+
+        // let age= window.prompt("enter your age");
+        // let result=(age<=18)?"junior":"adult";
+        // document.write(result);
+        // console.log(result);
+
+        // nested if
+        // let a=4;
+        // let b=4;
+        // if(age<=18){
+        //     if(a==b){
+        //         document.write("equal");
+        //     }
+        // } else {
+        //     document.write("not equal");
+        // }
+        let num= window.prompt("enter number");
+        if(num%5==0){
+            document.write("number is multiple of 5 <br>");
+        }
+        else{
+            document.write("number is not multiple of 5 <br>");
+        }
+
+        let stu;
+        do{
+            stu=window.prompt("enter student marks");
+          
+        }while(stu<0 || stu>100);
+        if(stu>=90 && stu<=100){
+            document.write("grade A");
+        }
+        else if(stu>=70 && stu<=89){
+            document.write("grade B");
+        }
+        else if(stu>=60 && stu<=69){
+            document.write("grade C");
+        }
+        else if(stu>=50 && stu<=59){
+            document.write("grade D");
+        }
+        else{
+            document.write("fail");
+        }
+
+     </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Function: block of code that can be reused and can be called</p>
+    <!-- function definition :function funName(){code} //parameter
+     Function call:funName()//orgument
+     it work both parameter and also without parameter-->
+     <!-- Function name rule is same as variable -->
+    <script>
+        // function hello(a,p){
+        //     c=a+p;
+        //     return c
+        // }
+        // hello(10,20);
+        // document.write(hello("prajwal","P K"));
+        // document.write(hello(10,20));
+        // Arrow function:its is compact way of function
+        // let add=(a,b)=>{return a+b}
+        //let add=(a,b)=>{return a+b}; //or let add=(a,b)=>a+b  //here add is an variable name
+        // document.write("\n" +add(10,20)+"\n");
+        // assignment 1: create a function using both function keyword and arow function that takes a string as an argument and returs number of vowels in that string(a,e,i,o,u)
+        function countVowels(str) {
+            let count = 0;
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u') {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        document.write(countVowels("prajwal")+"<br>");
+
+        let vowels=(str)=>{
+            let count=0;
+            a=["a","e","i","o","u"];
+            for(let i=0;i<str.length;i++){
+                // if(a.includes(str[i])){
+                    if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u') {
+                
+                    count++;  
+                    // document.write(str[i]);  
+                }
+            }
+            return count;
+        }
+        document.write(vowels("prajwal"));
+       
+    </script>
+</body>
+</html>

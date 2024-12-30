@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select onchange="change(this)" id="colors">
+        <option value="white">choose color</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+        <option value="yellow">yellow</option>
+        <option value="orange">orange</option>
+        <option value="pink">pink</option>
+        <option value="black">black</option>
+        <option value="purple">purple</option>
+    </select>
+    <p id="demo">Happy Birthday</p>
+    <script>
+        function change(sel){
+           if(sel.selectedIndex==0){
+               document.getElementById("demo").style.backgroundColor="white";
+               alert("please select a color");
+           }
+           else{
+               let col=sel.options[sel.selectedIndex].value;
+               document.getElementById("demo").style.backgroundColor=col;
+           }
+        }
+    </script>
+</body>
+</html>

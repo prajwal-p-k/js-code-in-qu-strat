@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .error{
+        color: red;
+    }
+    #error,#error1,#error2,#error3,#error4,#error5,#error6{
+        color: red;
+    }
+
+</style>
+<body>
+    <form action="2D array.html">
+        <table border="2px">
+            <tr>
+                <td>Name</td>
+                <td><input type="textBox" id="name" onblur="validateName()"></td>
+                <td id="error"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" id="email" onblur="validateEmail()"></td>
+                <td id="error6"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="textbox" id="email1" onblur="validatepass()"></td>
+                <td id="error1"></td>
+            </tr>
+
+            <tr>
+                <td>Mobile Number</td>
+                <td><input type="text" id="number" onblur="validateNumber()"></td>
+                <td id="error2"></td>
+            </tr>
+
+            <tr>
+                <td>choose sport</td>
+                <td>
+                    <select id="sports" onblur="validateSport()">
+                        <option value="">Select a sport</option>
+                        <option value="football">Football</option>
+                        <option value="volleyball">Volleyball</option>
+                        <option value="tennis">Tennis</option>
+                </td>
+                <td id="error3"></td>
+            </tr>
+            <tr>
+                <td>address</td>
+                <td><textarea id="address" onblur="validateAddress()" rows="3" cols="30"></textarea></td>
+                <td id="error4"></td>
+            </tr>
+
+            <tr>
+                <td>Gender</td> 
+                <td>
+                    <input type="radio" id="male" name="gender" value="Male" onblur="validateGender()"> Male
+                    <input type="radio" id="female" name="gender" value="Female" onblur="validateGender()"> Female
+                <td id="error5"></td>
+            </tr>
+            
+                <td colspan="2">
+                    <input type="checkbox" id="terms" onblur="validateTerms()"> I agree to the terms and conditions
+                </td>
+                <td><span id="sterms" class="error"></span></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Save" onclick="return validateForm()" /></td>
+            </tr>
+
+            <script>
+             function validateName() {
+            let ndata = document.getElementById("name").value;
+            let nre = /^[A-Z][a-zA-Z ]+$/;
+            if (ndata.match(nre)) {
+                document.getElementById("error").innerText = "";
+                return true;
+            } else {
+                document.getElementById("error").innerText = "Name is not in the correct format";
+                return false;
+            }
+        }
+
+        function validateEmail() {
+            let edata = document.getElementById("email").value;
+            let ere = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (edata.match(ere)) {
+                document.getElementById("error6").innerText = "";
+                return true;
+            } else {
+                document.getElementById("error6").innerText = "Invalid Email";
+                return false;
+            }
+        } 
+
+       
+        function validatepass() {
+            let edata = document.getElementById("email1").value;
+            let ere = /^\d{4}[$]$/;
+
+            if (edata.match(ere)) {
+                document.getElementById("error1").innerText = "";
+                return true;
+            } else {
+                document.getElementById("error1").innerText = "Invalid Password";
+                return false;
+            }
+        }
+
+        function validateNumber() {
+            let pdata = document.getElementById("number").value;
+            let pre = /^[6-9]\d{9}$/;
+            if (pdata.match(pre)) {
+                document.getElementById("error2").innerText = "";
+                return true;
+            } else {
+                document.getElementById("error2").innerText = "InValid Mobile Number";
+                return false;
+            }
+        }
+
+        function validateSport() {  
+            let sdata = document.getElementById("sports").value;
+            if (sdata == "") {
+                document.getElementById("error3").innerText = "Must select a sport";
+                return false;
+            } else {
+                document.getElementById("error3").innerText = "";
+                return true;
+            }
+        }
+
+        function validateAddress() {
+            let adata = document.getElementById("address").value;
+            if (adata == "") {
+                document.getElementById("error4").innerText = "Please enter your address";
+                return false;
+            } else {
+                document.getElementById("error4").innerText = "";
+                return true;
+            }
+
+        }
+
+        function validateGender() {
+            if (!document.querySelector('input[name="gender"]:checked')) {
+                document.getElementById("Error5").textContent = "Must select the gender";
+                return false;
+            } else {
+                document.getElementById("Error5").textContent = "";
+                return true;
+            }
+        }
+ 
+        function validateTerms() {
+            let terms = document.getElementById("terms").checked;
+            if (terms) {
+                document.getElementById("sterms").innerText = "";
+                return true;
+            } else {
+                document.getElementById("sterms").innerText = "You must agree to the terms and conditions";
+                return false;
+            }
+        }
+
+        function validateForm() {
+            if (validateName() && validateEmail() && validateNumber() && validateSport() && validateAddress() && validateGender() && validateTerms()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+
+            </script>
+            
+        </table>
+    </form>
+</body>
+</html>

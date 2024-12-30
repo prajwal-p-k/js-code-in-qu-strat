@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>regular expression: is a sequence of characters that form a search pattern</p>
+    <script>
+        var a="prajwal P K";
+        // c="where ther is a will there is a way 1233 @#$%$%^&^&*?:;'"; 
+        var re=new RegExp(/[abc]/gi);
+        re=/[a-z]/gi
+        re=/[0-9]/g
+        
+        re=/[a-zA-Z0-9]/g
+        re=/[^a-zA-Z0-9]/g
+        // re=/[a-z0-9]/gi
+        re=/[a-z0-9@#$%^&*()_+]/gi
+        
+
+        // document.write(c.match(re));
+        // document.write("<br>")
+        // document.write(c.test(re));
+        c="Banglore is a city of karnatak,it is also a Silicon cit ss ssss ssssss s.";
+        // re=/Banglore|karnatak/gi
+
+        re=/banglore/gi
+        re=/[a-z]?/gi
+
+        re=/[a-z]*/gi
+
+        re=/[a-z]+/gi
+
+        re=/s{1,4}/gi
+        re=/[a-z]{1,4}/gi
+         re=/[a-z]{4,}/gi
+
+        re=/\./gi || /[.]/gi; //used to check the dot in sting
+        re=/^ore/g
+        re=/ore$/g
+
+        re=/^Banglore|.$/gi;
+
+        // var re=/KA[0-9]{2}[A-Z]{2}[0-9]{1,4}/gi
+        //  var c= "KA11EQ4471";
+        re=/(Bang)/g //used to cheack the order
+
+
+        document.write(c.match(re));
+
+    </script>
+</body>
+</html>

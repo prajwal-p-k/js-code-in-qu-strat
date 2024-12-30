@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js.js" type="text/javascript"></script>
+</head>
+<body>
+    <script>
+        // var names=new Array(3);
+        // var marks=0;
+        // names[0]= new Array(2);
+        // names[1]= new Array(7);
+        // names[2]= new Array(2);
+        
+        // for(i=0;i<names.length;i++){
+        //     for(j=0;j<names[i].length;j++){
+        //         names[i][j]= Number(window.prompt("enter the marks"));
+        //         marks+=names[i][j];
+        //     }
+        // }
+        // document.write("<table border='2' >");
+        //     for(i=0;i<names.length;i++){
+        //         document.write("<tr>");
+        //         for(j=0;j<names[i].length;j++){
+        //             document.write("<td>"+names[i][j]+"</td>");
+        //         }
+        //         document.write("</tr>");
+        //     }
+        //     document.write("<tr><td colspan='2'>total</td><td>"+marks+"</td></tr>");
+        // document.write("</table>");
+        var students=new Array(6);
+        var marks=0;
+        b=prompt("enter the  of student name")
+        for(i=0;i<students.length;i++){
+            students[i]=new Array(2);
+            students[i][0]=window.prompt("enter the subject name");
+            students[i][1]=Number(window.prompt("enter the marks"));
+            marks+=students[i][1];
+        }
+        document.write("<table border='2' >");
+            document.write("<tr>");
+            document.write("<th>name</th>");
+            document.write("<td>"+b+"</td>");
+            document.write("</tr>");
+            for(i=0;i<students.length;i++){
+                document.write("<tr>");
+                for(j=0;j<students[i].length;j++){
+                    document.write("<td>"+students[i][j]+"</td>");
+                }
+                document.write("</tr>");
+            }
+            document.write("<tr><td colspan='2'>total</td><td>"+marks+"</td></tr>");
+            document.write("<tr><td colspan='2'>avg</td><td>"+marks/students.length+"</td></tr>");
+
+        document.write("</table>");
+    </script>
+    
+
+</body>
+</html>

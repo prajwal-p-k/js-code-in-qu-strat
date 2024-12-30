@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="/1.jpg" alt="/2.jpg" id="img" width="100" height="100" >
+    <Button id="a" onclick="flip()">flip</Button>
+    <script>
+        let count=0;
+      
+            function flip(){
+                if(count==0){
+                    document.images[0].src="/2.jpg";
+                    count=1;
+                }
+                else{
+                    document.images[0].src="/1.jpg";
+                    count=0;
+                }
+            }
+        
+    </script>
+</body>
+</html>

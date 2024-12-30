@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a="Javascript is a scripting language used to create client side code";
+        var re=/[^abc]/gi //we dont need abc
+        a="Asha Ashwini Anusha Apeksha Anu eric anil Aprpitha Bindu Teja Suja Mamtha Arun ";
+        re=/\bA[a-z]+/gi //chech the name start with A
+        re=/[A-Z]+A\b/gi //chech the name end with a
+        re=/\b[a-hj-z]{1}[a-z]*\Bi[a-z]*[a-hj-z]{1}\b/gi
+        re=/^[a-zA-Z\s]+$/gi
+        re=/^\S+@\S+\.\S+$/gi
+        re=/^[1-9]\d{9}$/
+        re=/^\S+@+\.+\S[a-z]{2,3}$/gi
+        a="prajwalpk@gmailcom";
+        re=/[A-Za-z_\-]+@[A-Za-z] +[\.]+[a-z]{2,3}/;
+
+        document.write(a.match(re));
+    </script>
+</body>
+</html>

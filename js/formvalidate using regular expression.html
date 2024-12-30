@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sports Club Application</h1>
+    <form action="1index.html">
+        <table border="2">
+            <tr>
+                <td><label>Name</label></td>
+                <td> <input type="text" id="fullname"> </td>
+                <td> <span id="sfullname"></span> </td>
+            </tr>
+            <tr>
+                <td><Label>Password</Label></td>
+                <td> <input type="password" id="pwd"> </td>
+                <td> <span id="spwd"></span> </td>
+            </tr>
+            <tr>
+                <td> <input type="submit" onclick="return validate()"> </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function validate(){
+            let ndata = document.getElementById("fullname").value;
+            let pdata = document.getElementById("pwd").value;
+            let nre=/^[A-Z][a-zA-z]+$/;
+            let pre=/^\d{4}$/;
+            if(ndata.match(nre)){
+                if(pdata.match(pre)){
+                    alert("validation is successful!!");
+                    return true;
+                }
+                else{
+                    alert("password is invalid");
+                }
+            }
+            else{
+                alert("fullname is not in correct format");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

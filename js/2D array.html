@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>2-dimentional arrray</p>
+    <script>
+        // var names=new Array(3);
+        // names[0]= new Array(3);
+        // names[1]= new Array(2);
+        // names[2]= new Array(3);
+        
+        // for(i=0;i<names.length;i++){
+        //     for(j=0;j<names[i].length;j++){
+        //         names[i][j]= window.prompt("enter the name");
+                
+        //     }
+        
+
+        // }
+        // document.write("<table border='2' >");
+        //     for(i=0;i<names.length;i++){
+        //         document.write("<tr>");
+        //         for(j=0;j<names[i].length;j++){
+        //             document.write("<td>"+names[i][j]+"</td>");
+        //         }
+        //         document.write("</tr>");
+        //     }
+        // document.write("</table>");
+        // var names=[["praj","prajwal","kumar"],["kumar","prajwal","kumar"],["rahul","manoj"]];
+        // for(i=0;i<names.length;i++){
+        //     for(j=0;j<names[i].length;j++){
+        //         document.write(names[i][j]+"<br>");
+                
+        //     }
+        // }
+
+        // var names=new Array(3);
+        // names[0]= new Array(2);
+        // names[1]= new Array(7);
+        // names[2]= new Array(2);
+        
+        // for(i=0;i<names.length;i++){
+        //     for(j=0;j<names[i].length;j++){
+        //         names[i][j]= window.prompt("enter the name");
+                
+        //     }
+        
+
+        // }
+        // document.write("<table border='2' >");
+        //     for(i=0;i<names.length;i++){
+        //         document.write("<tr>");
+        //         for(j=0;j<names[i].length;j++){
+        //             document.write("<td>"+names[i][j]+"</td>");
+        //         }
+        //         document.write("</tr>");
+        //     }
+        // document.write("</table>");
+
+        // flat() -convert the multidimensional array into single dimensional array
+        // let newArr=names.flat()//it does not change the original array
+        //indexof: it will search the index of the element
+        // let a=newArr.lastIndexOf("prajwal");// last occurence of the element
+        // document.write(a);
+        // includes() :it used to check the element is present or not
+        // let b=newArr.includes("prajwal");
+        // document.write(b);
+        // sort() : it will sort the array in ascending order
+        // let c=newArr.sort();
+        // document.write("<br>"+c);
+        // let c=newArr.reverse();
+        // document.write("<br>"+c);
+        // to need on decending order first need to sort and then reverse both sort() and reverse() will change the original array
+        // tosorted()&toReversed() : it desnot change the original array
+        // let c=newArr.toSorted();
+        // document.write("<br>"+c);
+        // map():it will perform the operation on each array element and create new array it will not change the original array
+        // const num1=[1,2,3,4,5];
+        // const num2=num1.map(x);
+        // function x(val ,index,arr){
+        //     return val*2;
+        // }
+
+        // document.write(num2);
+        // filter():it will perform the operation on each array element and create new array it will not change the original array
+        // const num1=[1,2,3,4,5];
+        // const num2=num1.filter(x);
+        // function x(val ,index,arr){
+        //     return val%2==0;
+        // }
+
+        // reduce():it perform some operation and reduces the array to a single value and does not change the original array
+        // const num1=[1,2,3,4,5];
+        // const num2=num1.reduce(x);
+        // function x(total,val ,index,arr){
+        //     return total+val;
+        // }
+        // document.write(num2);
+        
+        // a)use the reduce method to calculate the sum of the array
+        // b) the calculate the product of the array
+        //
+        // let newArr1=b.flat()
+        let n=window.prompt("enter the lenth");
+        let arr=[];
+        for(let i=0;i<n;i++){
+            arr.push(Number(window.prompt("enter the number")));
+            // arr[i-1]=i;
+        }
+        document.write(arr+"<br>");
+
+        let sum=arr.reduce((res,curr)=>res+curr);
+        
+        document.write("sum is:"+sum+"<br>");
+        // let mul=arr.reduce((res,curr)=>res*curr);
+        let mul=arr.reduce((res,curr)=>res*curr);
+        
+        
+        document.write("multiplication is:"+mul+"<br>");
+//         let fac=arr.reduce((res,curr)=>{
+//             var result = curr;
+//             while (curr > 1) { 
+//     curr--;
+//     result *= num;
+//   }document.write("factorial is:"+result);
+// });
+     for(let j of arr){
+         let fact=1;
+         for(let i=1;i<=j;i++){
+             fact=fact*i;
+         }
+         document.write(+j+" factorial is:"+fact+"<br>");
+     }
+
+
+
+
+    </script>
+</body>
+</html>

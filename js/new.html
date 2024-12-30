@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b{
+            background-color: red;
+            color: white;
+            font: 1.5em sans-serif;
+        }
+        
+
+        @media all and (orientation: portrait)   {
+            
+         
+           
+            .a{
+                display: flex;
+
+            }
+            .b{
+                background-color: aqua;
+                display: none;
+
+            }
+            
+        }
+        .c{
+
+            background-color: blue;
+            color: rgb(85, 27, 27);
+            font: 1.5em sans-serif;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <button onclick="onclit()" id="demo">click</button>
+    <!-- <p id="demo"></p> -->
+    <script>
+        count=1;
+        function onclit(){
+            document.getElementById("demo").textContent=count++;
+        }
+    </script>
+    
+</body>
+</html>

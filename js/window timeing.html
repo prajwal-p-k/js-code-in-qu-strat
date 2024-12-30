@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="start" onclick="start()"/><br>
+    <input type="button" value="stop" onclick="stop()"/><br>
+    <script>
+        var c;
+        // function start(){
+        //     c=setInterval(function(){
+        //         alert("enri media");
+        //     },3000)
+        // }
+        // 
+        function start(){
+            c=setTimeout(function(){
+                alert("enri media");
+            },3000)
+        }
+        // function stop(){
+        //     clearInterval(c);
+        // }
+        function stop(){
+            clearTimeout(c);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <form>
+        <label for="num1">Enter Number One:</label>
+        <input type="text" id="num1" /><br><br>
+ 
+        <label for="num2">Enter Number Two:</label>
+        <input type="text" id="num2" /><br><br>
+ 
+        <label for="operation">Enter Operation</label>
+        <input type="text" id="operation" /><br><br>
+ 
+   
+        <input type="button" value="Calculate" onclick="performCalculation()"/><br><br>
+ 
+        <label for="result">Result:</label>
+        <span id="result"></span>
+    </form>
+ 
+    <script>
+ 
+        function performCalculation() {
+ 
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var operation = document.getElementById('operation').value;
+            var result;
+ 
+ 
+            if (operation === '+') {
+                result = num1 + num2;
+            } else if (operation === '-') {
+                result = num1 - num2;
+            } else if (operation === '*') {
+                result = num1 * num2;
+            } else if (operation === '/') {
+ 
+                if (num2 === 0) {
+                    result = "Error: Division by zero!";
+                } else {
+                    result = num1 / num2;
+                }
+            } else {
+                result = "Invalid operation!";
+            }
+ 
+   
+            document.getElementById('result').textContent = result;
+        }
+    </script>
+</body>
+</html>
+ 

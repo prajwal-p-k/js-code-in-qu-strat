@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1.	Write a JavaScript function that reverses a number.
+Sample Data and output:
+Example x = 32243;
+Expected Output: 34223
+Hint: Use join, reverse and split method -->
+
+<!-- <P>2.	Write a JavaScript function that accepts a string as a parameter and finds the longest word within the string.
+Example string : 
+Expected Output : 'Development'
+Hint: Use match method and length property
+</P> -->
+<!-- <p>3.	Write a JavaScript program to create a class called 'Rectangle' with properties for width and height. Include two methods to calculate rectangle area and perimeter. Create an instance of the 'Rectangle' class and calculate its area and perimeter.</p> -->
+ <!-- <p>Write a JavaScript function to calculate 'yesterday's day.</p> -->
+
+ <p>Write a JavaScript function to get the value of the href, hreflang, rel, target, and type attributes of the specified link.  Display the results one after the other in using alert.</p>
+
+    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" hreflang="en" type="text">Google</a>
+    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" hreflang="en" type="text"></a>
+
+    <script>
+        // x = 32243;
+        // document.write("the Input is "+x);
+
+        // document.write("<br>");
+
+        // document.write("the Output is ");
+
+        // document.write(x.toString().split('' ).reverse().join(''));
+        document.write("<br>");
+        
+
+
+
+    //     let x='Web Development Tutorial ';
+
+    //     let y=x.split(' ');
+        
+    //     document.write(y);
+
+    //     document.write("<br>");
+    //     j="";
+
+    //    for(let i of y){ 
+        
+    //     if(i.length>j.length){
+    //         j=i;
+    //     }
+    //    }
+    //    document.write("the longest word is :"+j+"<br>");
+
+
+
+
+
+
+        // class Rectangle{
+        //     constructor(width,height){
+        //         this.width=width;
+        //         this.height=height;
+        //     }
+        //     area(){
+        //         return this.width*this.height;
+        //     }
+        //     perimeter(){
+        //         return 2*(this.width+this.height);
+        //     }
+        // }
+        // let r1=new Rectangle(5,6);
+        // document.write("Area of Rectangle is "+r1.area()+"<br>");
+        // document.write("Perimeter of Rectangle is "+r1.perimeter()+"<br>");
+
+
+
+
+
+        // let d=new Date();
+
+        // let date=new Date(d.getFullYear(),d.getMonth(),d.getDate()-1);
+
+        // document.write(date);
+
+        function getLinkAttributes(aElement){
+            alert("href: "+aElement.href);
+            alert("hreflang: "+aElement.hreflang);
+            alert("rel: "+aElement.rel);
+            alert("target: "+aElement.target);
+            alert("type: "+aElement.type);
+        }
+
+        let anchors=document.querySelectorAll("a");
+        for(let i=0;i<anchors.length;i++){
+            getLinkAttributes(anchors[i]);
+        }
+
+    </script>
+</body>
+</html>

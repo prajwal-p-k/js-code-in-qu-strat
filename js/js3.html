@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var name;
+        var age;
+        name=prompt("enter your name");
+        age=window.prompt("enter your age");
+
+        // the input recieved from prompt is always a string formate ,you need to convert it to int or float you need to perform mathematical operations on it
+        var res=window.confirm("was the above information correct?");
+        
+       document.write("<table border='2' bgcolor='yellow' >");
+       document.write("<tr>") 
+       document.write("<th> name:") 
+      
+       document.write("</th>")
+       document.write("<th> "+name)
+      
+       
+       document.write("</tr>")
+       document.write("<tr>") 
+      
+       document.write("<th> age:")
+      
+       document.write("</th>")
+       document.write("<th> "+age )
+      
+       document.write("</th>")
+       document.write("</tr>")
+       
+      
+       document.write("</th>")
+       document.write("<th> Result:")
+      
+       document.write("</th>")
+       document.write("<th> "+res )
+      
+       document.write("</th>")
+       document.write("</tr>")
+
+    
+       
+       document.write("</table>");
+
+       const product={
+        name:'paker Jotter Standard ct ball pen (black) ',
+        rating:4,
+        isDeal:true,
+        price:270
+       };
+       document.writeln(product.name +"<br>");
+       
+       document.writeln(product.rating +"<br>");
+       document.writeln(product.isDeal +"<br>");
+       document.writeln(product.price);
+
+
+        
+    </script>
+
+</body>
+</html>

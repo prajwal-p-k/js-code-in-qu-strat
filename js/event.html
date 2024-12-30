@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>clik the mouse ,web page will change ,image is loaded ,hover on element ,input will change</p>
+    <h1 onclick="this .innerHTML='prajwal'"> hello</h1>
+    <p onclick="change(this)">image is loaded</p>
+    <h1 id="alias">clik me</h1>
+    Full name: <input type="text" id="name" onchange="uppercase()">
+    <div onmouseover="  mOver(this)" onmouseout="   mOut(this)">Dboss</div>
+    <script>
+        function change(id){
+            id.innerHTML="prajwal";
+        }
+        document.getElementById("alias").onclick=dispayDate;
+        function dispayDate(){
+            document.getElementById("alias").innerHTML=Date();
+        }
+        function uppercase(){
+           const x=document.getElementById("name");
+           x.value=x.value.toUpperCase();
+        }
+// chack on :onload and  onUnload,onmousedown, onmouseup, onfocus ,keydown,keyup,invalid,mousemove events & nodeList
+        function mOver(obj) {
+            obj.innerHTML = "enri media";
+        }
+        function mOut(obj) {
+            obj.innerHTML = "Bye";
+        }
+        
+    </script>
+</body>
+</html>

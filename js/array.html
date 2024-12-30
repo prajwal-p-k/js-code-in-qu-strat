@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P>array:is a collection of similar type of data which hold more than one value</P>
+
+    <script>
+        let student=[10,20,30,40,50];//student is an array name
+        // document.write(student+"<br>");
+        let ab=["prajwal",20,"p k"+"<br>"];//array literal method.
+        // document.write(ab[0]);
+        // document.write(ab.lastIndexOf(20)+"<br>");
+        // ab[3]="kumar";
+        // document.write(ab+"<br>");
+        // adding to array using index,new keyword
+        // const stud=new array(10,20,30,40,50);
+        // document.write(array+"<br>");
+        document.write(ab.lastIndexOf(0)+"<br>");
+        // tostring is used to convert array to string 
+        // the array is an object it does not support
+        ab.push(60);
+        document.write(ab+"<br>");
+        let len=ab.length;
+        let txt="<ul>";
+        for(let i=0;i<len;i++){
+            txt+="<li>"+ab[i]+"</li>";
+        }
+        txt+="</ul>";
+        // document.write(txt);
+        // for(let city of ab){
+        //     document.write(city+"<br>");
+        // }
+        // for(let city in ab){
+        //     document.write(city+"<br>");
+        // }
+        // given array marks of student [85,97,44,37,76,60] find avg of entire
+        // a=[85,97,44,37,76,60];
+        // let sum=0;
+        // let total=0
+        // for (marks of a){   
+        // total=total+marks;
+        // sum+=1;
+        // }
+        // document.write("total marks="+total+" the avg marks="+total/sum);
+        //for a given array with prices of 5 items [250,645,300,900,50] all the prices offer of 10% ,change the tarry to store the final price 
+        // let b=[250,645,300,900,50];
+        // let=c;
+        // for(i of b){
+        //     document.write(i*0.9+"<br>");
+        // }
+        // document.write(b+"<br>");
+        let a=[70,80,90,100,60];
+        let b=["prajwal","kumar","kantha","manu","sai"];
+        let c=0;
+        for(let i in a){
+            document.write("<table border='1' bgcolor='yellow' height='10' width='100' border-collapse='collapse'>");
+
+            document.write("<tr>")
+            document.write("<td>"+b[i]+"</td>")
+            document.write("<td>"+a[i]+"</td>")
+            c+=a[i];
+            document.write("</tr>")
+        }
+        document.write("<tr>")
+            document.write("<td>"+"total"+"</td>")
+            document.write("<td>"+c/a.length+"</td>")
+            document.write("</tr>")
+
+        document.write("</table>");
+        
+
+     
+
+    </script>
+
+    
+</body>
+</html>

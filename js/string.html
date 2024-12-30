@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>string: is a squence of character enclose with in single or double quote ,strings are inmutable</p>
+    <P id="demo">display the result using document.write</P>
+    <script>
+        let name="prajwal";
+        // template string: indroduce with modern javascript,it enclose with backtick[`]
+        let data1="hey i'm prajwal"; //use double and single quote with in template string it is not occurse any error
+        let obk={item:"pen",price:10};
+        document.write("the cost of pen is $",obk.price);
+        let a=`the item names are ${obk.item}`; //this is template string
+        document.write("<br>")
+        document.write(a); //the value is calculated during run time is called data interpolation
+        // escape characters:\ which turn special character into string character
+        let data2="hey i\"m prajwal\"";
+        document.write("<br>")
+        document.write(data2);//to break the string we use +
+        // charAt() method:it return the character at the given index
+        let data3="prajwal";
+        document.write("<br>")
+        document.write(data3.charAt(3));
+        // charCodeAt() method:it return the character code at the given index
+        let data4="prajwal";
+        document.write("<br>")
+        document.write(data4.charCodeAt(3));
+        // at() will same as charAt() but this is introduce in ES6
+        // []:propery methode 
+        // slice() method:it return the substring from the given index
+        let data5="prajwal";
+        document.write("<br>")
+        document.write(data5.slice(2,4));// strings are immutable and end index not included
+        // substring() method:it return the substring from the given index
+        let data6="prajwal";
+        document.write("<br>")//postion counted from end
+        document.write(data6.substring(2,4));//strings are immutable
+        // substr():it take two parameter start and length
+        document.write("<br>")
+        document.write(data6.substr(2,4));
+        // split() method:it split the string into an array
+        let data7="prajwal";
+        document.write("<br>")
+        document.write(data7.split("a"))
+        // toUpperCase() and toLowerCase() method
+        let data8="prajwal";
+        document.write("<br>")
+        document.write(data8.toUpperCase());
+        document.write("<br>")
+        document.write(data8.toLowerCase());
+        // concat() method
+        let data9="prajwal";
+        document.write("<br>")
+        document.write(data9.concat(" P K"))
+        document.write("<br>")
+        data10="P K;"
+        document.write(data9 + data10);
+        // trim() method: remove the white space from both side (trimstrat() and trimend())
+        let data11="    prajwal    ";
+        document.write("<br>")
+        document.write(data11.trimEnd());
+        
+        // padStart() and padEnd() method it support padding at the start and end of the string
+        let data12="prajwal";
+        document.write("<br>")
+        document.write(data12.padStart(10,"*"));
+        document.write("<br>")
+        document.write(data12.padEnd(10,"*"));
+        // repeat() method:it repeat the string
+        let data13="prajwal";
+        document.write("<br>")
+        document.write(data13.repeat(5));
+        // replace() method:it replace the string and it ony replace the first occurence or first match (also use\ \i, inscsetive case) \ \g global match;
+        let data14="prajwal";
+        document.write("<br>")
+        document.write(data14.replace("a","k"));
+        // replaceAll() method:it replace all the occurence
+        // indexOf() method:it return the index of the first occurence
+        // lastIndexOf() method:it return the index of the last occurence
+        // search() method:it is same as indexof()
+        document.write("<br>")
+        document.write(data14.lastIndexOf("a"));
+        document.write("<br>")
+        document.write(data14.match("a"));//it will use regular expression
+        document.write("<br>")
+        document.write(data14.search("j"));//index of use regular expression but index method is not use regular expression
+        document.write("<br>")
+        // document.write(data14.search(/a/));//index of use regular expression
+        // include() method:it return true or false and 2nd parameter is optional for start from where for all below
+        document.write("<br>")
+        document.write(data14.includes("a"));
+        // startsWith() method:it return true or false
+        document.write("<br>")
+        document.write(data14.startsWith("a",2));
+        // endsWith() method:it return true or false
+        document.write("<br>")
+        document.write(data14.endsWith("a"));
+        document.getElementById("demo").innerHTML=data14;
+        // promt the user to enter the full name . generate the user name length based the input start @ end with names lenth
+        let name1=prompt("enter your name");
+        document.write("<br>")
+        document.write("@"+name1+name1.length);
+          
+
+        
+
+    </script>
+</body>
+</html>

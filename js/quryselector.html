@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Qurselector: returns the first element that matches the CSS selector</h1>
+    <h1>headin1</h1>
+    <h1>headin1</h1>
+    <h2>headin2</h2>
+    <h2>headin2</h2>
+    <p>henri media </p>
+    <span class="b">span1</span>
+    <div>
+
+    
+    <p class="a">what are you doing</p>
+    <p id="c">prajwal p k</p>
+    <a href="https://www.google.com" target="_blank">Google</a>
+    <a href="https://www.youtube.com" target="_self">Youtube</a>
+</div>
+<p class="a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum reprehenderit libero, ratione placeat quos optio assumenda sequi alias vitae, sed saepe nostrum tempora modi, voluptas delectus vero. Aut, sint inventore.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere hic cumque praesentium placeat, labore, sapiente reiciendis a pariatur architecto quod voluptate nesciunt ducimus, nobis distinctio eum? Cumque ex suscipit voluptates?</p>
+    <script>
+        // quryselectorAll
+        let data=document.querySelectorAll("p.a");
+        document.getElementById("b").innerHTML=data[0].innerHTML;
+        // textContent: returns the text content of an element even though the element is hidden
+    </script>
+</body>
+</html>

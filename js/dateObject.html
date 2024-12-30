@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="1"> -->
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        date object is used to get the date and time
+        new Date() constructor to create new data object.Clock is static but system of clock is running
+        clock is running state.
+        JS use browser time Zone to display dates.
+
+    </p>
+    <script>
+         // there are 9 ways to create ther date()
+        //  using constructore
+        let d=new Date();
+        document.write(d);
+        document.write("<br>")
+        // date string
+        const d1=new Date("june 10,2020 10:00:00");
+        document.write(d1);
+        document.write("<br>")
+        const d2=new Date(2022-2-10);
+        document.write(d2);
+        // year and month
+        const d4=new Date(2002,8,7,4,30,10,5);
+        document.write("<br>")
+        document.write(d4);//months counts from 0-11
+        const d3=new Date(2002,11,9);
+        document.write("<br>")
+        document.write(d3);
+        const d5=new Date(2002,11);
+        document.write("<br>")
+        document.write(d5);
+        const d6=new Date(2002);
+        document.write("<br>")
+        document.write(d6);
+        // previous  century 19**
+        const d7=new Date(96,1,24);
+        document.write("<br>")
+        document.write(d7);
+        // next century
+        const d8=new Date(0);
+        document.write("<br>")
+        document.write(d8);
+        // js store data has milliseconds 1day=8,64,00,000 jan 1 1970
+        const d9=new Date("dec 9 2002 4:30:10");
+        document.write("<br>");
+        document.write(d9);//use the get methode to return the local time
+        // const d10=new Date();
+        // document.write("<br>");
+        // document.write(d10.getFullYear());
+        // document.write("<br>");
+        // document.write(d10.getMonth());
+        // document.write("<br>");
+        // document.write(d10.getDate());
+        // document.write("<br>");
+        // document.write(d10.getHours());
+        // document.write("<br>");
+        // document.write(d10.getMinutes());
+        // document.write("<br>");
+        // document.write(d10.getSeconds());
+        // document.write("<br>");
+        // document.write(d10.getMilliseconds());
+        // display the time in 12 hours format with am and pm
+        const d11=new Date(prompt("enter date"));
+        document.write("<br>");
+        if(d11.getHours()>12){
+            document.write(d11.getHours()-12+":"+d11.getMinutes()+":"+d11.getSeconds());
+            document.write(" pm");
+        }
+        else{
+            document.write(d11.getHours()+":"+d11.getMinutes()+":"+d11.getSeconds());
+            document.write(" am");
+        }
+
+       
+        
+    </script>
+</body>
+</html>

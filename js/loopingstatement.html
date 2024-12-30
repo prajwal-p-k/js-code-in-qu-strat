@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <p>Looping statement : for,while,do while . to exicute pice of code again and again</p>
+
+    <script>
+        sum=0
+
+        // for(let i=1;i<=10;i++){ 
+        //     sum+=i 
+        //     document.write(i+"<br>");
+        // }
+
+       
+
+        // document.write("sum="+sum);
+        // loop nevers stop its called infinite loop
+        //while loop:
+        // synatx:while(condition){
+        //     code
+        // let i=20;
+        // while(i>=10){
+        //     document.write(i+"<br>");
+        //     i--;
+        // }
+
+
+        // do while loop:
+        // synatx:do{
+        //     code
+        // }while(condition);
+
+        // let i=9;
+        // do{
+        //     document.write("hello")
+        //     document.write(i+"<br>");
+        //     i--;
+        // }while(i>=10);
+
+        // for-of loop(string),for-in loop
+        // synatx:for(variable of sting){
+        //     code
+        // } only for string and array
+
+        // i=0;
+        // let arr="prajwal P K";
+        // for(let num of arr){
+        //     i+=1;
+        //     document.write(num+"<br>");
+        // }
+        // document.write("Length of string="+i);
+
+        // for-in loop
+        // for(let i in arr){
+        //     document.write(arr[i]+"<br>");
+        // }
+
+        // let a=[10,20,30,40,50];
+        // for(let i in a){
+        //     document.write(a[i]+"<br>");
+        // }
+
+        // let stud={
+        //     name:"prajwal P K",
+        //     age:21,
+        //     education:"BE"
+        // };
+        // for(let i in stud){
+        //     document.write("value of "+i+" is "+stud[i]+"<br>");
+        // }
+        // print all odd numbers from 1 to 100 use for,while,do while loop
+
+        // for(let i=1;i<=100;i++){
+        //     if(i%2!=0){
+        //         document.write(i+"<br>");
+        //     }
+        // }
+
+        // let i=1;
+
+        // while(i<=100){
+        //     if(i%2!=0){
+        //         document.write(i+"<br>");
+        //     }
+        //     i++;
+        // }
+
+        // do{
+        //     if(i%2!=0){
+        //         document.write(i+"<br>");
+        //     }
+        //     i++;
+        // }while(i<=100);
+
+
+
+        // let gameNumber=20;
+        // let guess=0;
+        // do{
+        //     guess=window.prompt("guess the number between 1 to 100");
+        //     if(guess<gameNumber){
+        //         window.alert("higher");
+        //     }
+        //     else if(guess>gameNumber){
+        //         window.alert("lower");
+        //     }
+
+        // }while(guess!=gameNumber);
+        // window.alert("congrats you guessed the number");
+
+        let gameNumber=20;
+        let guess=0;
+        while(guess!=gameNumber){   
+            guess=window.prompt("guess the number between 1 to 100");
+            if(guess<gameNumber){
+                window.alert("higher");
+            }
+            else if(guess>gameNumber){
+                window.alert("lower");
+            }   
+            
+        }
+        window.alert("congrats you guessed the number"); 
+        // i=window.prompt("guess the number between 1 to 100")
+
+        // for(i;i!=gameNumber;i=window.prompt("guess the number between 1 to 100")){
+
+        //     // i=window.prompt("guess the number between 1 to 100")
+        //     if(i<gameNumber){
+        //         window.alert("higher");
+        //     }
+        //     else if(i>gameNumber){
+        //         window.alert("lower");
+        //     } 
+           
+        // }
+        // window.alert("congrats you guessed the number");
+
+    </script>
+
+</body>
+</html>

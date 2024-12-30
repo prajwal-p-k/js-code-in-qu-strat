@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>To create many object of same type we can use an object constructor fun.</p>
+    <script>
+        // function person(name,age,city){
+        //     this.name=name;
+        //     this.age=age;
+        //     this.city=city;
+        //     this.nation="India";
+          
+        // }
+        // let p1=new person("prajwal",20,"Mandya"+"<br>");
+        // document.write(p1.city);
+        // // we can use new key word to create new object
+        // const student=new person("prajwal",20,"kolkata");
+        // document.write(student);
+
+        function person(name, age, city) {
+    this.name = name;
+    this.age = age;
+    this.city = city;
+    this.nation = "India";
+    
+    // stud method to update city and village
+    this.stud = function(a, b) {
+        this.city = a;
+        this.village = b;
+    };
+}
+
+// Creating a new person instance
+let p1 = new person("Prajwal", 20, "Mandya");
+
+// Calling the stud method to update city and village
+p1.stud("Mandya", "Peehalli");
+
+// Accessing the village property after calling the stud method
+document.write(p1.village);
+
+    </script>
+</body>
+</html>
